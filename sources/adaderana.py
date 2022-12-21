@@ -24,11 +24,7 @@ class AdaDerana:
                     image_link = div.find("img")["src"]
                     snippet = div.find("p").text
                     encoded_url = quote(url)
-                    my_dict["data"].append({"url": url})
-                    my_dict["data"].append({"title": title})
-                    my_dict["data"].append({"snippet": snippet})
-                    my_dict["data"].append({"image_link": image_link})
-                    my_dict["data"].append({"encoded_url": encoded_url})
+                    my_dict["data"].append({"url": url,"title": title,"snippet": snippet,"image_link": image_link,"encoded_url": encoded_url})
                 return my_dict
         except:
             return None
@@ -46,8 +42,7 @@ class AdaDerana:
                 title = div.find("h1").text
                 body = div.find("div", class_="news-content").text
 
-                my_dict["post"].append({"title": title})
-                my_dict["post"].append({"body": body})
+                my_dict["post"].append({"title": title,"body": body})
                 return my_dict
         except:
             return None
