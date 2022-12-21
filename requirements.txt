@@ -4,4 +4,3 @@ uvicorn[standard]
 beautifulsoup4
 lxml
 requests
-urllib
