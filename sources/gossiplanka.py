@@ -16,7 +16,7 @@ class GossipLanka:
                 soup = BeautifulSoup(html, "lxml")
                 my_dict = {"data": []}
 
-                for div in soup.find(id="main").find("div", class_="grid_posts").find_all("div", class_="blog_post"):
+                for div in soup.find(id="main").find("div", class_="grid-posts").find_all("div", class_="blog-post"):
                     url = div.find("h2").a["href"]
                     title = div.find("h2").a.string
                     image_link = div.find("span", class_="post-thumb")["image-src"]
