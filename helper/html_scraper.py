@@ -14,7 +14,7 @@ class Scraper:
                                       "like Gecko) Chrome/91.0.4472.106 Safari/537.36 "
                     },
             ) as response:
-                return await response.text(encoding="ISO-8859-1")
+                return await response.text(encoding="utf-8")
         except:
             return None
 
